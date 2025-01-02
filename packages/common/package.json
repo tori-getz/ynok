@@ -1,0 +1,34 @@
+{
+  "name": "@ynok/common",
+  "version": "0.0.1",
+  "description": "ynok core",
+  "main": "dist/src/main.js",
+  "types": "dist/src/main.d.ts",
+  "scripts": {
+    "tsc:dev": "tsc --declaration --emitDeclarationOnly --outDir dist --watch",
+    "swc:dev": "swc src -d dist --config-file .swcrc --watch",
+    "dev": "concurrently \"npm run swc:dev\" \"npm run tsc:dev\" \"npm run client:dev\"",
+    "tsc:build": "tsc --build --declaration --emitDeclarationOnly --verbose",
+    "swc:build": "swc src -d dist --config-file .swcrc",
+    "build": "npm run swc:build && npm run tsc:build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tori-getz/ynok.git"
+  },
+  "keywords": [
+    "ssr"
+  ],
+  "author": "Daniil Benger (tori-getz)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tori-getz/ynok/issues"
+  },
+  "homepage": "https://github.com/tori-getz/ynok#readme",
+  "devDependencies": {
+    "@swc/cli": "^0.5.2",
+    "@swc/core": "^1.10.4",
+    "chokidar": "^3.6.0",
+    "typescript": "^5.7.2"
+  }
+}

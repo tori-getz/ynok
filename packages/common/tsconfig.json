@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "./dist/src",
+    "rootDir": "./src",
+    "target": "ES6",
+    "module": "CommonJS",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
